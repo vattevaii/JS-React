@@ -21,6 +21,4 @@ Example:
 <button onClick={()=>takeMe(data)}>
 or if function already present and no need for data to pass or event only needed..
 <button onClick={takeMe}>
-
-
 ```
