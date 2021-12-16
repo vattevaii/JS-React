@@ -1,7 +1,7 @@
 // How to create variables:
-var x;
-let y;
-const z;
+// var x;
+// let y;
+// const z;
 // The keyword const is a little misleading.
 // It does not define a constant value. It defines a constant reference to a value.
 
@@ -50,7 +50,6 @@ const z;
 
 
 // OBJECTS
-
 // e.g const person = {
 //   firstName: "John",
 //   lastName : "Doe",
@@ -65,7 +64,6 @@ const z;
 
 
 // fUNCTIONS
-
 // Can be defined in three ways
     // function name(parameter1, parameter2, parameter3) {
     //     // code to be executed
@@ -165,3 +163,12 @@ const z;
 // Promises
 // async await
 // then catch
+
+const person ={
+    firstname:'Ram',
+    fullname: ()=>{
+        console.log(person.firstname)
+    }
+}
+
+person.fullname()

@@ -42,3 +42,8 @@
 // const numbers = [2,3,5,6,9];
 // let newNumbers = numbers.filter((n,i)=> n > 3)
 // console.log(newNumbers)
+
+let a= 5;
+let b=5;
+
+console.log(a===b);
