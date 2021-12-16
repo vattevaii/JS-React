@@ -17,29 +17,42 @@ li:not(.done) {
    cursor: pointer;
 }
 
-li:not(.done):hover {
+li:not(.done):hover, li:not(.done):focus {
    border: 1px solid black;
    background: #00000008
 }
 
-li:not(.done):hover::after {
-   content: "Double tap to mark the item as Done";
+li:hover::after, li:focus::after {
    position: absolute;
    left: 50%;
    top: 50%;
    transform: translate(-50%, -50%);
    color: grey;
    font-size: .6em;
+   width: 100%;
 }
 
-li.done:hover::after {
+li:not(.done):hover::after, li:not(.done):focus::after {
+   content: "Double tap to mark the item as Done";
+}
+
+li.done:hover::after, li.done:focus::after {
    content: "Task Already Done";
-   position: absolute;
-   left: 50%;
-   top: 50%;
-   transform: translate(-50%, -50%);
-   color: grey;
-   font-size: .6em;
+}
+
+ul {
+   padding-right: 10px;
+}
+
+@media screen and (max-width:600px) {
+   li:hover::after, li:focus::after {
+      top: initial;
+      bottom: -5px;
+   }
+
+   ul {
+      padding: 10px;
+   }
 }
 
 li {
@@ -48,7 +61,7 @@ li {
    justify-content: space-between;
    align-items: center;
    padding: min(20%, 20px);
-   margin-right: 10px;
+   /* margin-right: 10px; */
 }
 
 li>span {
