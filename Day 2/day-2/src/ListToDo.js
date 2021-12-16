@@ -6,7 +6,8 @@ const ListToDo = ({ done, task, index, markDone, remove }) => {
    }, [done])
    return (
       <li key={done} className={done ? 'done' : ''}
-         onDoubleClick={() => markDone(index)}>
+         onDoubleClick={() => markDone(index)}
+         tabIndex={1}>
          - {task}
          <span><button onClick={() => { remove(index) }}>{done ? 'Remove' : 'Delete'}</button></span>
       </li>
