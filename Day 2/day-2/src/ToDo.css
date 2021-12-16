@@ -61,3 +61,9 @@ input {
    padding: .2em;
    border-radius: 1vw;
 }
+
+input+p {
+   font-size: .5em;
+   color: grey;
+   height: 1ch;
+}

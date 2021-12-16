@@ -36,6 +36,7 @@ function ToDo() {
    return (
       <div style={{ fontSize: "1.5rem" }}>
          <input type="text" placeholder="Type in a task..." value={inp} onChange={inputHandler} onKeyPress={submitHandler} />
+         <p>{!!inp && "Press Enter to add the item to the ToDo List"}</p>
          <ul>{
             todo.map((todoitem, index) => (
                // <><li>{'' + todoitem.done}</li>
